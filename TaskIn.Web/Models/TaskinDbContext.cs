@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 
 namespace TaskIn.Web.Models
 {
-    public interface IUserRepository
+    public class TaskinDbContext
     {
-        IEnumerable<User> AllUsers { get; }
-        User GetUserById (int userId);
     }
 }

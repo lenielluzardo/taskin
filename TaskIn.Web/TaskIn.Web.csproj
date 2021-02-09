@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\content\" />
   </ItemGroup>
 
 </Project>

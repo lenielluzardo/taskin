@@ -1,0 +1,11 @@
+﻿@model TodoListViewModel
+
+        @Model.CurrentUser
+        @foreach(var todo in Model.Todos)
+        {
+        <div>
+            <h2>@todo.Title</h2>
+            <h4>@todo.StartDate</h4>
+            <h4>@todo.EndDate</h4>
+        </div>
+        }

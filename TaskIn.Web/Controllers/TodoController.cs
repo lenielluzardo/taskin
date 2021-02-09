@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TaskIn.Web.Models;
+using TaskIn.Web.ViewModels;
 
 namespace TaskIn.Web.Controllers
 {
@@ -19,7 +20,11 @@ namespace TaskIn.Web.Controllers
         }
         public ViewResult List()
         {
-            return View(_todoRepository.AllTodos);
+            var todoViewModel = new TodoListViewModel();
+            todoViewModel.Todos = _todoRepository.AllTodos ;
+            todoViewModel.CurrentUser = "John Doe";
+
+            return View(todoViewModel);
         }
     }
 }
